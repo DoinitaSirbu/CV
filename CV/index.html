@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,200&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+<script>
+    window.html2canvas = html2canvas;
+    window.jsPDF= window.jspdf.jsPDF;
+
+    function makePDF() {
+    html2canvas(document.querySelector("#capture"), {
+        allowTaint: true,
+        useCORS: true,
+        scale: 1
+    }).then(canvas => {
+        var img = canvas.toDataURL("image/png");
+        var extraWidth = 18; 
+        var doc = new jsPDF({
+            format: [canvas.width, canvas.height]
+        });
+        doc.addImage(img, 'JPEG', 0, 0, canvas.width, canvas.height);
+        doc.save("CV - SIRBU DOINA.pdf");
+    });
+}
+
+
+</script>
+
+</head>
+<body >
+    <!--Our App-->
+    <div id="capture" style="padding: 10px;" class="app-wrapper">
+    <!--Right-side-container-->
+    <div class="right-side-container">
+        <!--About me section-->
+        <div> 
+            <h4 class="about-me-profession">Junior Software Developer</h4>
+            <h1 class="about-me-name">Sîrbu Doina</h1>
+            <p class="about-me-description">I am passionate and dedicated, I enjoy challenges that allow me 
+                to develop my skills and constantly learn new things. I am highly enthusiastic about Java 
+                and strive to continuously improve my knowledge and abilities in this field. I like to explore 
+                and discover all sorts of new things, and ambition and the desire to do things on time define me. 
+                I endeavor to achieve good results in everything I do and to always be punctual and efficient.</div>
+
+        <!--Education Section-->
+        <div>
+            <h3 class="education-header">Education</h3>
+            <ul class="education-list" >
+                <li><h4 class="education-header-2">Master's in Computer Science - Applied Computer Science in
+                    Science and Technology </h4></li>
+                    <p class="education-time">Oct 2023 - present   | Vasile Alecsandri University | Bacau</p>
+                <li><h4 class="education-header-2">Master's Degree - Romanian Culture and Literature </h4></li>
+                    <p class="education-time">Oct 2021 - Jun 2023   | Vasile Alecsandri University | Bacau  </p>
+                <li><h4 class="education-header-2">Bachelor of Sciences - Computer Science </h4></li>
+                    <p class="education-time">Oct 2020 - Jun 2023   | Vasile Alecsandri University | Bacau</p>
+                <li><h4 class="education-header-2">Bachelor of Leers - French-Romanian </h4></li>
+                    <p class="education-time">Oct 2018 - Jun 2021   | Vasile Alecsandri University | Bacau  </p>
+            </ul>
+        </div>
+        <!--Certifications Section-->
+        <div>
+            <h3 class="courses-header">Certifications</h3>
+            <ul class="course-list">
+                <li><h4 class="course-header">Software Engineering Career Program</h4></li>
+                <p class="course-time">OctDigital Stack / Sep 2023 - Nov 2023</p>
+    
+                <li><h4 class="course-header">C# 10 | Ulmate Guide - Beginner to Advanced | Master class</h4></li>
+                <p class="course-time">Udemy / Jul 2023</p>
+    
+                <li><h4 class="course-header">Java Development -Google Digital Workshop</h4></li>
+                <p class="course-time">Digital Stack / Apr 2023 - Jun 2023</p>
+    
+                <li><h4 class="course-header">Complete C# Masterclass</h4></li>
+                <p class="course-time">Udemy / Dec 2022</p>
+            </ul>
+        </div>
+
+        <button class="button-section" onclick="makePDF()">Download CV</button>
+    </div>
+    <!--Sidebar section-->
+    <aside class="sidebar-section">
+        <img src="images/photo.jpg" alt="Profile picture" width="370" class="sidebar-image">
+
+        <!--Contact Informations-->
+        <div class="contacts-container">
+            <h3  class="contacts-header">Contacts</h3>
+            <div class="contacts-element"> 
+                <img src="images/telefon-icon.png" alt="Phone Icon" class="contact-icon">
+                <span class="contact-item">Phone:</span>
+                <a href="tel:0762169402" class="contacts-phone">0762169402</a>
+            </div>
+            <div> 
+                <img src="images/email-icon.png" alt="Email Icon" class="contact-icon">
+                <span  class="contact-item">Email:</span>
+                <a href="mailto:doinasirbu10@gmail.com" class="contacts-email">doinasirbu10@gmail.com</a>
+            </div>
+            <div>
+                <img src="images/linkedin-icon.png" alt="Linkedin Icon" class="contact-icon">
+                <span class="contact-item">Linkedln:</span>
+                <a href="https://www.linkedin.com/in/doina-s%C3%AErbu-485a45238/" class="contacts-linkedln">Doina Sîrbu</a>
+            </div>
+            <div>
+                <img src="images/github-icon.png" alt="Git Icon" class="contact-icon">
+                <a href="https://github.com/DoinitaSirbu" class="contacts-github">GitHub: Doina Sirbu</a>
+            </div>
+        </div>
+        <!--Tech skills section-->
+        <div class="tech-skills-section">
+            <h3 class="tech-skills-header">Tech Skills</h3>
+            <ul class="tech-skills-list">
+                <li>Java</li>
+                <li>C#</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>GIT</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+        <!--Soft skills section-->
+        <div class="soft-skills-section">
+            <h3 class="soft-skills-header">Soft Skills</h3>
+            <ul class="soft-skills-list">
+                <li>Adaptability</li>
+                <li>Quick Learning</li>
+                <li>Problem Solving</li>
+                <li>Teamwork</li>
+            </ul>
+        </div>
+        <!--Languages section-->
+        <div class="language-section">
+            <h3 class="laguage-header">Languages</h3>
+            <ul class="language-list">
+                <li>English</li>
+                <li>French</li>
+            </ul>
+        </div>
+    </aside>
+    </div>
+</body>
+</html>

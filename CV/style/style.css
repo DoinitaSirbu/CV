@@ -1,0 +1,200 @@
+/*Our App*/
+body{
+
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F6F6FA;;
+
+
+
+.app-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+}
+
+/* Sidebar Styles */
+.sidebar-section {
+    background-color: #83C5BE;
+}
+
+.sidebar-image {
+    margin-top: 40px;
+}
+
+.contacts-container {
+    padding-left: 40px;
+}
+
+.contacts-header,
+.tech-skills-header,
+.soft-skills-header,
+.language-header {
+    color: #161D2A;
+    font-size: 23px; /* Increased font size */
+    font-weight: 600; /* Increased font weight for bold */
+    line-height: normal;
+}
+
+.contacts-item,
+.contacts-linkedln,
+.contacts-phone,
+.contacts-email,
+.contacts-github,
+.tech-skills-list,
+.soft-skills-list,
+.language-list {
+    color: #161D2A;
+    font-size: 17px; /* Increased font size */
+    font-weight: 550; /* Increased font weight for semi-bold */
+    line-height: 30px; /* Increased line height */
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.contacts-linkedln{
+    line-height: 30px;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 20px;;  
+}
+.contacts-phone,
+.contacts-email
+{
+    line-height: 30px;
+    text-decoration: none;
+    margin-left: 10px; 
+    
+}
+.contacts-github {
+    line-height: 30px;
+    text-decoration: none;
+    color: #161D2A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 0px;
+}
+
+.contacts-github:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
+
+.contacts-element {
+    margin-top: -12px;
+}
+
+.tech-skills-section,
+.soft-skills-section,
+.language-section {
+    padding-left: 40px;
+    margin-top: 40px;
+}
+
+}
+/*Main content Styles*/
+.right-side-container{
+    padding-left: 88px;
+    padding-top: 80px;
+    padding-right: 40px;
+    padding-bottom: 180px;
+}
+.about-me-profession{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    }
+    .about-me-name{
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top:-5px; 
+    }
+    .about-me-description{
+        color: #595959;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+        margin-top:-12px;
+        text-align: justify;
+    }
+    .education-header{
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .courses-header{
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .education-list{
+        margin-left: -15px;
+    }
+    .course-list{
+        margin-left: -15px;
+    }
+    .education-time{
+        color: #A8A8A8;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -5px;
+    }
+    .education-header-2{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .course-header{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .course-time{
+        color: #A8A8A8;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -5px;
+    }
+    .button-section {
+        background-color: #3498db; /* Schimbă culoarea de fundal la alegere */
+        color: #fff; /* Schimbă culoarea textului la alegere */
+        padding: 10px 20px; /* Setează padding-ul la alegere */
+        font-size: 16px; /* Setează dimensiunea fontului la alegere */
+        border: none;
+        border-radius: 5px; /* Rotunjirea colțurilor la alegere */
+        cursor: pointer;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        
+    }
+    
+    .button-section:hover {
+        background-color: #2980b9; 
+    }
+    .contact-icon {
+        width: 20px; 
+        height: auto; 
+        margin-right: 5px; 
+        vertical-align: middle; 
+    }
+
+    
+
+    
+
+
